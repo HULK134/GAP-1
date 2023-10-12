@@ -1,4 +1,4 @@
-Оповещение Прометея Графана
+Оповещение. Прометей.
 
 mkdir /opt/GAP-1 nano /opt/GAP-1/prometheus.yml
 

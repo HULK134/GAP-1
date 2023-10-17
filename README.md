@@ -8,7 +8,7 @@ nano /GAP-1/prometheus_stack/prometheus/prometheus.yml
 docker-compose up -d 
 
 #КОНФИГ ДОКЕР КОМПОЗ
-
+<p>
 version: '3.9'
 
 services:
@@ -28,7 +28,7 @@ services:
       TZ: "Europe/Moscow"
     networks:
       - default
-      
+</p>     
 # прометей_экспортет
   node-exporter:
     image: prom/node-exporter

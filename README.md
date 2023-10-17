@@ -128,6 +128,23 @@ services:
     networks:
       - default
       
+# Victoria
+  victoria:
+    image: prom/victoria-metrics
+    container_name: victoria-metrics
+    hostname: victoria-data
+    ports:
+      - 8428:8428
+    restart: unless-stopped
+    command:
+      - "--config.file=/etc/victoria-data/vicrotia-data.yml"
+    volumes:
+      - ./victoria-metrics:/etc/victoria
+    environment:
+      TZ: "Europe/Moscow"
+    networks:
+      - default
+      
 # subnet docker
 networks:
   default:
@@ -136,3 +153,10 @@ networks:
       config:
         - subnet: 172.28.0.0/16
 
+# Send metrics Victoria
+remote_write:
+  - url: http://localhost:8428/api/v1/write
+    queue_config:
+      max_samples_per_send: 10000
+      capacity: 20000
+      max_shards: 30

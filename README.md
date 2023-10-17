@@ -8,10 +8,11 @@ nano /GAP-1/prometheus_stack/prometheus/prometheus.yml
 docker-compose up -d 
 
 #КОНФИГ ДОКЕР КОМПОЗ
+
 version: '3.9'
 
 services:
-# прометей
+
   prometheus:
     image: prom/prometheus:latest
     volumes:
@@ -27,6 +28,7 @@ services:
       TZ: "Europe/Moscow"
     networks:
       - default
+      
 # прометей_экспортет
   node-exporter:
     image: prom/node-exporter
@@ -48,6 +50,7 @@ services:
       TZ: "Europe/Moscow"
     networks:
       - default
+      
 # Графана      
   grafana:
     image: grafana/grafana
@@ -66,6 +69,7 @@ services:
       TZ: "Europe/Moscow"
     networks:
       - default
+      
 # Алерт менеджер бот
   alertmanager-bot:
     command:
@@ -88,6 +92,7 @@ services:
       - ./data:/data
     networks:
       - default
+      
 # Алерт менеджер
   alertmanager:
     image: prom/alertmanager:v0.21.0
@@ -106,6 +111,7 @@ services:
       - '--storage.path=/etc/alertmanager/data'
     networks:
       - default
+      
 # Блекбокс
   blackbox:
     image: prom/blackbox-exporter
@@ -122,6 +128,7 @@ services:
       TZ: "Europe/Moscow"
     networks:
       - default
+      
 # Сеть внутри контейнеров
 networks:
   default:

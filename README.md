@@ -1,13 +1,13 @@
 СТЕК МОНИТОРИНГА
 
-# СОЗДАНИЕ ДИРЕКТОРИИ И РЕДАКТИРВОАНИЕ ФАЙЛА
+# Create dir and edit config
 mkdir /GAP-1/prometheus_stack/prometheus/prometheus.yml 
 nano /GAP-1/prometheus_stack/prometheus/prometheus.yml
 
-# ЗАПУСК КОНТЕЙНЕРОВ С ПОМОЩЬЮ COMPOSE
+# start docker-compose
 docker-compose up -d 
 
-#КОНФИГ ДОКЕР КОМПОЗ
+# Config docker-compose.yml
 
 version: '3.9'
 
@@ -28,7 +28,7 @@ services:
       TZ: "Europe/Moscow"
     networks:
       - default   
-# прометей_экспортет
+# exporters
   node-exporter:
     image: prom/node-exporter
     volumes:
@@ -50,7 +50,7 @@ services:
     networks:
       - default
       
-# Графана      
+# Grafana      
   grafana:
     image: grafana/grafana
     user: root
@@ -69,7 +69,7 @@ services:
     networks:
       - default
       
-# Алерт менеджер бот
+# Alertmanager bot
   alertmanager-bot:
     command:
       - --alertmanager.url=http://alertmanager:9093
@@ -92,7 +92,7 @@ services:
     networks:
       - default
       
-# Алерт менеджер
+# Alermanager
   alertmanager:
     image: prom/alertmanager:v0.21.0
     user: root
@@ -111,7 +111,7 @@ services:
     networks:
       - default
       
-# Блекбокс
+# Blackbox
   blackbox:
     image: prom/blackbox-exporter
     container_name: blackbox
@@ -128,7 +128,7 @@ services:
     networks:
       - default
       
-# Сеть внутри контейнеров
+# subnet docker
 networks:
   default:
     ipam:

@@ -5,7 +5,7 @@ mkdir /GAP-1/prometheus_stack/prometheus/prometheus.yml
 nano /GAP-1/prometheus_stack/prometheus/prometheus.yml
 
 # ЗАПУСК КОНТЕЙНЕРОВ С ПОМОЩЬЮ COMPOSE
-<p><b>
+<div>
 docker-compose up -d 
 
 #КОНФИГ ДОКЕР КОМПОЗ
@@ -29,7 +29,7 @@ services:
       TZ: "Europe/Moscow"
     networks:
       - default
-</b></p>     
+</div>     
 # прометей_экспортет
   node-exporter:
     image: prom/node-exporter

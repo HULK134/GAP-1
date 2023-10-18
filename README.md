@@ -155,8 +155,10 @@ networks:
       config:
         - subnet: 172.28.0.0/16
 <code> 
+
+  # Send metrics Victoria
 <pre>
-# Send metrics Victoria
+
 remote_write:
   - url: http://192.168.56.106:8428/api/v1/write
     queue_config:

@@ -161,7 +161,7 @@ networks:
  </code>
 </pre> 
 
-Victoria  
+
 # Send metrics Victoria
 <pre>
 remote_write:

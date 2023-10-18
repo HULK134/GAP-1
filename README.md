@@ -163,18 +163,17 @@ networks:
 
 
 # Send metrics Victoria
-<pre>
 remote_write:
   - url: http://192.168.56.106:8428/api/v1/write
     queue_config:
       max_samples_per_send: 10000
       capacity: 20000
       max_shards: 30
- <code>
+
 # Victoria Create Container
-<pre>
+<code>
 docker volume create victoria-metrics-data
- <code>
+
 # Victoria UP Container
 <pre>
 docker run -d \

@@ -1,3 +1,13 @@
+global:
+  scrape_interval:     15s # By default, scrape targets every 15 seconds.
+  evaluation_interval: 15s # By default, scrape targets every 15 seconds.
+
+  # Attach these labels to any time series or alerts when communicating with
+  # external systems (federation, remote storage, Alertmanager).
+  external_labels:
+    monitor: 'monitoring-top'
+    server_name: prometheus-test # Имя сервера для отображения в VM
+
 # Метрики в викторию
 remote_write:
   - url: http://192.168.56.106:8428/api/v1/write

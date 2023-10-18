@@ -183,5 +183,4 @@ docker run -d \
   -p 8428:8428 \
   --name victoria-metrics \
   victoriametrics/victoria-metrics:latest 
-
-</code>
+<code>

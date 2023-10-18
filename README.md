@@ -6,9 +6,10 @@ nano /GAP-1/prometheus_stack/prometheus/prometheus.yml
 </pre>
 <pre>
 # start docker-compose
-docker-compose up -d 
 <code>
-<pre>  
+docker-compose up -d 
+</code>code>
+</code>pre>  
 # Config docker-compose.yml
 
 version: '3.9'

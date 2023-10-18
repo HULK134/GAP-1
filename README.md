@@ -172,7 +172,7 @@ remote_write:
       max_shards: 30
 
 # Victoria Create Container
-<code>
+</pre>
 docker volume create victoria-metrics-data
 <code>
 

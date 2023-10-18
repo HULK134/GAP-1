@@ -170,11 +170,11 @@ remote_write:
       max_samples_per_send: 10000
       capacity: 20000
       max_shards: 30
-<code>    
+ <code>
 # Victoria Create Container
 <pre>
 docker volume create victoria-metrics-data
-<code>
+ <code>
 # Victoria UP Container
 <pre>
 docker run -d \
@@ -182,4 +182,4 @@ docker run -d \
   -p 8428:8428 \
   --name victoria-metrics \
   victoriametrics/victoria-metrics:latest 
-<code>
+ <code>

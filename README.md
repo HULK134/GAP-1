@@ -173,15 +173,15 @@ remote_write:
 <code>
 
 # Victoria Create Container (192.168.56.106)
- <pre>
+<pre>
  docker volume create victoria-metrics-data
- <code>
+ 
 
 # Victoria UP Container (192.168.56.106)
- <pre>
+
 docker run -d \
   -v victoria-metrics-data:/victoria-metrics-data \
   -p 8428:8428 \
   --name victoria-metrics \
   victoriametrics/victoria-metrics:latest 
- <code>
+<code>

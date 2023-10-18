@@ -3,7 +3,7 @@
 # Create dir and edit config
 mkdir /GAP-1/prometheus_stack/prometheus/prometheus.yml 
 nano /GAP-1/prometheus_stack/prometheus/prometheus.yml
-<code>
+</pre>
 <pre>
 # start docker-compose
 docker-compose up -d 

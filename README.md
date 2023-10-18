@@ -177,10 +177,8 @@ docker volume create victoria-metrics-data
 <code>
 
 # Victoria UP Container
-<pre>
-docker run -d \
+<pre>docker run -d \
   -v victoria-metrics-data:/victoria-metrics-data \
   -p 8428:8428 \
   --name victoria-metrics \
-  victoriametrics/victoria-metrics:latest 
-<code>
+  victoriametrics/victoria-metrics:latest<code>

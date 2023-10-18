@@ -175,7 +175,7 @@ remote_write:
 # Victoria Create Container (192.168.56.106)
 <pre>
  docker volume create victoria-metrics-data
- 
+
 
 # Victoria UP Container (192.168.56.106)
 

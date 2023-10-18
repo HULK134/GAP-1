@@ -171,3 +171,15 @@ remote_write:
       capacity: 20000
       max_shards: 30
 <code>
+
+# Victoria Up Container
+<pre>
+ docker volume create victoria-metrics-data
+<code>
+<pre>
+docker run -d \
+  -v victoria-metrics-data:/victoria-metrics-data \
+  -p 8428:8428 \
+  --name victoria-metrics \
+  victoriametrics/victoria-metrics:latest 
+<code>

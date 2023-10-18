@@ -163,6 +163,7 @@ networks:
 
 
 # Send metrics Victoria
+<code>
 remote_write:
   - url: http://192.168.56.106:8428/api/v1/write
     queue_config:
@@ -181,4 +182,4 @@ docker run -d \
   -p 8428:8428 \
   --name victoria-metrics \
   victoriametrics/victoria-metrics:latest 
- <code>
+<code>

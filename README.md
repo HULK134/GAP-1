@@ -1,12 +1,14 @@
 СТЕК МОНИТОРИНГА
-
+<pre>
 # Create dir and edit config
 mkdir /GAP-1/prometheus_stack/prometheus/prometheus.yml 
 nano /GAP-1/prometheus_stack/prometheus/prometheus.yml
-
+<code>
+<pre>
 # start docker-compose
 docker-compose up -d 
-
+<code>
+<pre>  
 # Config docker-compose.yml
 
 version: '3.9'
@@ -152,11 +154,13 @@ networks:
       driver: default
       config:
         - subnet: 172.28.0.0/16
-
+<code> 
+<pre>
 # Send metrics Victoria
 remote_write:
-  - url: http://localhost:8428/api/v1/write
+  - url: http://192.168.56.106:8428/api/v1/write
     queue_config:
       max_samples_per_send: 10000
       capacity: 20000
       max_shards: 30
+<code>

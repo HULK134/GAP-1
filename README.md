@@ -4,6 +4,7 @@
 mkdir /GAP-1/prometheus_stack/prometheus/prometheus.yml 
 nano /GAP-1/prometheus_stack/prometheus/prometheus.yml
 </pre>
+
 <pre>
 # start docker-compose
 <code>
@@ -157,7 +158,7 @@ networks:
         - subnet: 172.28.0.0/16
 <code> 
 
-  # Send metrics Victoria
+# Send metrics Victoria
 <pre>
 
 remote_write:

@@ -172,10 +172,12 @@ remote_write:
       max_shards: 30
 <code>
 
-# Victoria Up Container
+# Victoria Create Container (192.168.56.106)
 <pre>
  docker volume create victoria-metrics-data
 <code>
+
+# Victoria UP Container (192.168.56.106)
 <pre>
 docker run -d \
   -v victoria-metrics-data:/victoria-metrics-data \

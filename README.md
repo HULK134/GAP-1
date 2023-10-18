@@ -12,10 +12,11 @@ docker-compose up -d
  </code>
 </pre>
 
+<pre>
 # Config docker-compose.yml
 
 version: '3.9'
-
+ <code>
 services:
 
   prometheus:
@@ -157,7 +158,8 @@ networks:
       driver: default
       config:
         - subnet: 172.28.0.0/16
-<code> 
+ </code>
+</pre> 
 
 Victoria  
 # Send metrics Victoria
